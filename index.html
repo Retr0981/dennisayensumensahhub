@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Denis Ayensu Mensah  Hub - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with Search and Social Media -->
+    <header>
+        <div class="top-bar">
+            <div class="logo">
+                <h1>UrbanStyle Hub</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search products..." aria-label="Search website">
+                <button onclick="pageSearch()">🔍</button>
+            </div>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><img src="https://img.icons8.com/fluent/24/facebook-new.png" alt="FB"></a>
+                <a href="#" aria-label="Twitter"><img src="https://img.icons8.com/fluent/24/twitter.png" alt="Twitter"></a>
+                <a href="#" aria-label="Instagram"><img src="https://img.icons8.com/fluent/24/instagram-new.png" alt="IG"></a>
+            </div>
+        </div>
+        <!-- Responsive Navigation -->
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Trends</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Background Video that auto-plays -->
+    <div class="hero-video">
+        <video autoplay muted loop playsinline aria-label="Background fashion show video">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-text">
+            <h2>Summer Collection 2025</h2>
+            <p>Free shipping on orders over $50</p>
+        </div>
+    </div>
+
+    <!-- Product Boxes with border-radius, box-shadow, hover -->
+    <main>
+        <h2 class="section-title">Bestsellers</h2>
+        <div class="product-grid">
+            <div class="product-card" tabindex="0">
+                <img src="https://via.placeholder.com/300x200?text=Product+1" alt="Stylish Denim Jacket">
+                <h3>Denim Jacket</h3>
+                <p>$59.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card" tabindex="0">
+                <img src="https://via.placeholder.com/300x200?text=Product+2" alt="Summer Sneakers">
+                <h3>Air Sneakers</h3>
+                <p>$89.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card" tabindex="0">
+                <img src="https://via.placeholder.com/300x200?text=Product+3" alt="Smart Watch">
+                <h3>Smart Watch Pro</h3>
+                <p>$199.99</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Social Media Newsfeed Embed (Static Demo) -->
+        <div class="newsfeed">
+            <h3>Latest from Instagram</h3>
+            <div class="fake-feed">
+                <p>🔥 New drop coming Friday! #UrbanStyle</p>
+                <p>👕 20% off for members - <a href="#">Join now</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Denis Ayensu Mensah  Hub | <a href="#">Accessibility</a> | <a href="#">Privacy</a></p>
+    </footer>
+
+    <script>
+        // On-page text search function
+        function pageSearch() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let bodyText = document.body.innerText.toLowerCase();
+            if (bodyText.indexOf(input) > -1) {
+                alert("Found on page! (Demo: Scroll manually. Real version would highlight.)");
+                // Highlight logic can be added but requires DOM traversal.
+            } else {
+                alert("Text not found on this page.");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>UrbanStyle Hub - Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="logo">
+                <h1>UrbanStyle Hub</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search products..." aria-label="Search website">
+                <button onclick="pageSearch()" aria-label="Search button">🔍 Search</button>
+            </div>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><img src="https://img.icons8.com/fluent/24/facebook-new.png" alt="Facebook"></a>
+                <a href="https://twitter.com" target="_blank"><img src="https://img.icons8.com/fluent/24/twitter.png" alt="Twitter"></a>
+                <a href="https://instagram.com" target="_blank"><img src="https://img.icons8.com/fluent/24/instagram-new.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="products.html">🛍️ Shop</a></li>
+                <li><a href="about.html">📖 About</a></li>
+                <li><a href="blog.html">📝 Trends</a></li>
+                <li><a href="contact.html">📞 Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-page">
+        <h2 class="section-title">📞 Get In Touch</h2>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <div class="info-item">
+                    <span>📍</span>
+                    <p>123 Fashion Avenue, New York, NY 10001</p>
+                </div>
+                <div class="info-item">
+                    <span>📧</span>
+                    <p>support@urbanstylehub.com</p>
+                </div>
+                <div class="info-item">
+                    <span>📞</span>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+                <div class="info-item">
+                    <span>🕒</span>
+                    <p>Mon-Fri: 9AM - 6PM EST<br>Sat: 10AM - 4PM EST<br>Sun: Closed</p>
+                </div>
+                
+                <div class="social-links">
+                    <h3>Follow Us</h3>
+                    <a href="#" class="social-link">📘 Facebook</a>
+                    <a href="#" class="social-link">🐦 Twitter</a>
+                    <a href="#" class="social-link">📸 Instagram</a>
+                    <a href="#" class="social-link">🎵 TikTok</a>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form action="#" method="post">
+                    <input type="text" placeholder="Your Name" required aria-label="Your name">
+                    <input type="email" placeholder="Your Email" required aria-label="Your email">
+                    <input type="text" placeholder="Subject" aria-label="Subject">
+                    <textarea rows="5" placeholder="Your Message" required aria-label="Your message"></textarea>
+                    <button type="submit" class="submit-btn">Send Message ✉️</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="map">
+            <h3>Find Us</h3>
+            <div class="fake-map">
+                <p>📍 123 Fashion Avenue, New York, NY 10001</p>
+                <div style="background:#e0e0e0; height:200px; display:flex; align-items:center; justify-content:center; border-radius:10px;">
+                    🗺️ [Interactive Map Would Load Here]
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Denis Ayensu Mensah  Hub | <a href="#">Accessibility Statement</a> | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        function pageSearch() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            if (input.length < 2) {
+                alert("Please enter at least 2 characters to search.");
+                return;
+            }
+            let bodyText = document.body.innerText.toLowerCase();
+            if (bodyText.indexOf(input) > -1) {
+                alert("✅ '" + input + "' found on this page!");
+            } else {
+                alert("❌ '" + input + "' not found on this page.");
+            }
+        }
+    </script>
+</body>
+</html>

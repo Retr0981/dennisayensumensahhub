@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>UrbanStyle Hub - Fashion Trends Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="logo">
+                <h1>UrbanStyle Hub</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search articles..." aria-label="Search website">
+                <button onclick="pageSearch()" aria-label="Search button">🔍 Search</button>
+            </div>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><img src="https://img.icons8.com/fluent/24/facebook-new.png" alt="Facebook"></a>
+                <a href="https://twitter.com" target="_blank"><img src="https://img.icons8.com/fluent/24/twitter.png" alt="Twitter"></a>
+                <a href="https://instagram.com" target="_blank"><img src="https://img.icons8.com/fluent/24/instagram-new.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="products.html">🛍️ Shop</a></li>
+                <li><a href="about.html">📖 About</a></li>
+                <li><a href="blog.html">📝 Trends</a></li>
+                <li><a href="contact.html">📞 Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="blog-page">
+        <h2 class="section-title">📝 Fashion Trends & Style Guide</h2>
+        
+        <div class="blog-grid">
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=400&h=250&fit=crop" alt="Summer fashion trends">
+                <div class="blog-content">
+                    <h3>Top 5 Summer Trends for 2025</h3>
+                    <p class="blog-date">May 15, 2025 | 5 min read</p>
+                    <p>From pastel hues to oversized silhouettes, discover what's hot this season. Learn how to style these must-have pieces...</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </article>
+            
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400&h=250&fit=crop" alt="Sustainable fashion">
+                <div class="blog-content">
+                    <h3>Sustainable Fashion: Why It Matters</h3>
+                    <p class="blog-date">May 10, 2025 | 7 min read</p>
+                    <p>Explore how eco-friendly choices are reshaping the fashion industry and how you can make a difference...</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </article>
+            
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&h=250&fit=crop" alt="Accessories guide">
+                <div class="blog-content">
+                    <h3>The Ultimate Accessories Guide</h3>
+                    <p class="blog-date">May 5, 2025 | 4 min read</p>
+                    <p>Complete any outfit with the right accessories. Bags, jewelry, shoes - we've got you covered...</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </article>
+            
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=400&h=250&fit=crop" alt="Men's fashion">
+                <div class="blog-content">
+                    <h3>Men's Style: Casual to Formal</h3>
+                    <p class="blog-date">April 28, 2025 | 6 min read</p>
+                    <p>Elevate your wardrobe with these timeless pieces that transition seamlessly from day to night...</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </article>
+        </div>
+        
+        <div class="newsletter">
+            <h3>📧 Subscribe to Our Newsletter</h3>
+            <p>Get weekly style tips, exclusive offers, and early access to sales!</p>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+                <button>Subscribe</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Denis Ayensu Mensah  Hub| <a href="#">Accessibility Statement</a> | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        function pageSearch() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            if (input.length < 2) {
+                alert("Please enter at least 2 characters to search.");
+                return;
+            }
+            let bodyText = document.body.innerText.toLowerCase();
+            if (bodyText.indexOf(input) > -1) {
+                alert("✅ '" + input + "' found on this page!");
+            } else {
+                alert("❌ '" + input + "' not found on this page.");
+            }
+        }
+    </script>
+</body>
+</html>

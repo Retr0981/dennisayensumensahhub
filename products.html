@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>UrbanStyle Hub - Shop All Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="logo">
+                <h1>UrbanStyle Hub</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search products..." aria-label="Search website">
+                <button onclick="pageSearch()" aria-label="Search button">🔍 Search</button>
+            </div>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><img src="https://img.icons8.com/fluent/24/facebook-new.png" alt="Facebook"></a>
+                <a href="https://twitter.com" target="_blank"><img src="https://img.icons8.com/fluent/24/twitter.png" alt="Twitter"></a>
+                <a href="https://instagram.com" target="_blank"><img src="https://img.icons8.com/fluent/24/instagram-new.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="products.html">🛍️ Shop</a></li>
+                <li><a href="about.html">📖 About</a></li>
+                <li><a href="blog.html">📝 Trends</a></li>
+                <li><a href="contact.html">📞 Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="section-title">🛍️ All Products</h2>
+        <div class="category-filter">
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">Men</button>
+            <button class="filter-btn">Women</button>
+            <button class="filter-btn">Accessories</button>
+            <button class="filter-btn">Sale 🔥</button>
+        </div>
+        
+        <div class="product-grid">
+            <div class="product-card" tabindex="0">
+                <img src="https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?w=300&h=200&fit=crop" alt="Denim Jacket">
+                <h3>Classic Denim Jacket</h3>
+                <p class="price">$59.99 <span class="old-price">$89.99</span></p>
+                <p class="badge">SALE</p>
+                <button class="add-to-cart">Add to Cart 🛒</button>
+            </div>
+            <div class="product-card" tabindex="0">
+                <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=300&h=200&fit=crop" alt="Running Shoes">
+                <h3>Ultra Comfort Sneakers</h3>
+                <p class="price">$89.99</p>
+                <button class="add-to-cart">Add to Cart 🛒</button>
+            </div>
+            <div class="product-card" tabindex="0">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&h=200&fit=crop" alt="Smart Watch">
+                <h3>Fitness Smart Watch</h3>
+                <p class="price">$199.99</p>
+                <button class="add-to-cart">Add to Cart 🛒</button>
+            </div>
+            <div class="product-card" tabindex="0">
+                <img src="https://images.unsplash.com/photo-1583744946564-b52ac1c389c8?w=300&h=200&fit=crop" alt="Summer Dress">
+                <h3>Boho Summer Dress</h3>
+                <p class="price">$45.99</p>
+                <button class="add-to-cart">Add to Cart 🛒</button>
+            </div>
+            <div class="product-card" tabindex="0">
+                <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=300&h=200&fit=crop" alt="Leather Bag">
+                <h3>Designer Handbag</h3>
+                <p class="price">$129.99 <span class="old-price">$199.99</span></p>
+                <p class="badge">SALE</p>
+                <button class="add-to-cart">Add to Cart 🛒</button>
+            </div>
+            <div class="product-card" tabindex="0">
+                <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=300&h=200&fit=crop" alt="Winter Coat">
+                <h3>Wool Blend Coat</h3>
+                <p class="price">$149.99</p>
+                <button class="add-to-cart">Add to Cart 🛒</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Denis Ayensu Mensah  Hub | <a href="#">Accessibility Statement</a> | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        function pageSearch() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            if (input.length < 2) {
+                alert("Please enter at least 2 characters to search.");
+                return;
+            }
+            let bodyText = document.body.innerText.toLowerCase();
+            if (bodyText.indexOf(input) > -1) {
+                alert("✅ '" + input + "' found on this page!");
+            } else {
+                alert("❌ '" + input + "' not found on this page.");
+            }
+        }
+    </script>
+</body>
+</html>
